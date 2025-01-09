@@ -1,0 +1,20 @@
+//------------------------- Paleta de Colores -------------------------//
+
+//Fondo principal: Gradiente de bg-gray-900 a bg-gray-800 a black
+$bg-gray-900: #111827;
+$bg-gray-800: #1F2937;
+$black: #000000;
+
+$text-white: #FFFFFF;      //Texto principal
+$text-gray-300: #D1D5DB;   //Texto secundario
+$bg-blue-600: #2563EB;     //Acento principal
+$bg-blue-700: #1D4ED8;     //Acento hover
+$bg-gray-800: #1F2937;     //Fondo de secciones alternas
+$bg-gray-700: #374151;     //Fondo de componentes
+$border-gray-600: #4B5563; //Borde de inputs
+$bg-gray-700: #374151;     //Fondo de inputs
+$text-gray-400: #9CA3AF;   //Texto de placeholder
+
+//------------------------------ Tipografía ------------------------------//
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap');
+$font-family-default: 'Inter', sans-serif;

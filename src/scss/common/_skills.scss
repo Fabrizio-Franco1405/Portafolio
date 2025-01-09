@@ -1,0 +1,68 @@
+@use '../variables.scss' as var;
+
+.skills-section {
+  padding: 4rem 2rem;
+  background: linear-gradient(200deg, var.$bg-gray-900 0%, var.$bg-gray-800 50%, var.$black 100%); // Fondo más oscuro
+  color: var.$text-white;
+
+  .skills-content {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      text-align: center;
+      color: var.$text-white;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+
+      @media(min-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media(min-width: 1024px) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .skill {
+        background-color: var.$bg-gray-800;
+        padding: 1.5rem;
+        border-radius: 0.5rem;
+        text-align: start;
+
+        h3 {
+          font-size: 1.5rem;
+          font-weight: 600;
+          margin-bottom: 1rem;
+        }
+
+        .skill-bar-bg {
+          background-color: var.$bg-gray-700;
+          border-radius: 0.25rem;
+          height: 0.5rem;
+          width: 100%;
+          overflow: hidden;
+
+          .skill-bar {
+            background-color: var.$bg-blue-600;
+            height: 100%;
+            width: 0; // Inicialmente vacío
+            transition: width 1s ease-in-out;
+          }
+        }
+
+        .skill-level {
+          margin-top: 0.5rem;
+          color: var.$text-gray-300;
+          text-align: right;
+        }
+      }
+    }
+  }
+}

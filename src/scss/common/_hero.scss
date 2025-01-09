@@ -1,0 +1,52 @@
+@use '../variables.scss' as var;
+@use '../mixins.scss' as mix;
+
+body {
+  background: linear-gradient(240deg, var.$bg-gray-900 0%, var.$bg-gray-800 50%, var.$black 100%);
+  margin: 0;
+  min-height: 100vh;
+  font-family: var.$font-family-default;
+}
+
+.hero-section {
+  min-height: 100vh;
+  @include mix.flex-center; // Usa el mixin para centrar
+  text-align: center;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    color: var.$text-white;
+    margin-bottom: 1rem;
+  }
+  
+  .typewriter {
+    font-size: 2rem;
+    color: var.$text-gray-300;
+    margin-bottom: 2rem;
+    border-right: 2px solid var.$bg-blue-600;
+    display: inline-block;
+  }
+  
+  .contact-btn {
+    background: var.$bg-blue-600;
+    color: var.$text-white;
+    padding: 1rem 2rem;
+    border-radius: 9999px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    margin-top: 1rem; // Agrega margen superior
+    @include mix.transition(background 0.3s);
+
+    &:hover {
+      background: var.$bg-blue-700;
+    }
+  }
+}
