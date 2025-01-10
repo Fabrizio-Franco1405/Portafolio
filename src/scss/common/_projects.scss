@@ -1,0 +1,105 @@
+@use '../variables.scss' as var;
+
+.projects-section {
+  padding: 4rem 2rem;
+  background-color: var.$bg-gray-800;
+  color: var.$text-white;
+
+  .projects-content {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+      text-align: center;
+      color: var.$text-white;
+    }
+
+    .projects-filters {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+
+      .filter-btn {
+        border: none;
+        padding: 0.5rem 1rem;
+        border-radius: 9999px;
+        background-color: var.$bg-gray-700;
+        color: var.$text-gray-300;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          background-color: var.$bg-gray-700;
+        }
+
+        &.active {
+          background-color: var.$bg-blue-600;
+          color: var.$text-white;
+        }
+      }
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+
+      @media(min-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media(min-width: 1024px) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .project {
+        background-color: var.$bg-gray-700;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        overflow: hidden;
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+
+        img {
+          width: 100%;
+          height: 200px;
+          object-fit: cover;
+          border-radius: 0.5rem;
+        }
+
+        .project-info {
+          padding: 1rem;
+
+          h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+          }
+
+          p {
+            font-size: 1rem;
+            color: var.$text-gray-400;
+            margin-bottom: 1rem;
+          }
+
+          .project-btn {
+            background-color: var.$bg-blue-600;
+            color: var.$text-white;
+            padding: 0.5rem 1rem;
+            border-radius: 0.25rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+            border: none;
+
+            &:hover {
+              background-color: var.$bg-blue-700;
+            }
+          }
+        }
+      }
+    }
+  }
+}

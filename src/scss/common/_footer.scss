@@ -1,0 +1,45 @@
+@use '../variables.scss' as var;
+@use '../mixins.scss' as mix;
+
+.footer-section {
+  padding: 2rem;
+  background-color: var.$bg-gray-900; // Fondo más oscuro
+  color: var.$text-white;
+  text-align: center;
+
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    p {
+      margin: 0;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 1.5rem;
+
+      .social-icon {
+        width: 24px;
+        height: 24px;
+        transition: transform 0.3s ease;
+
+        &:hover {
+          transform: scale(1.1); // Efecto hover de escalado
+        }
+
+        &:active {
+          transform: scale(0.9); // Efecto active de escalado
+        }
+
+        img, object {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}
