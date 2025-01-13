@@ -1,9 +1,9 @@
 @use 'variables';
 @use 'mixins';
-@use './common/header';
-@use './common/hero';
-@use './common/about';
-@use './common/skills';
-@use './common/projects';
-@use './common/contact';
-@use './common/footer';
+@use '../scss/common/header';
+@use '../scss/common/hero';
+@use '../scss/common/about';
+@use '../scss/common/skills';
+@use '../scss/common/projects';
+@use '../scss/common/contact';
+@use '../scss/common/footer';
